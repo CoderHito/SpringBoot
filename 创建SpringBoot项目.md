@@ -1,6 +1,9 @@
 # 创建Spring Boot项目
 
+**创建一个Spring Boot项目**
+
 1.创建一个java  maven 项目
+
 2.pom.xml文件中配置
 
 	<parent>  
@@ -48,3 +51,5 @@
 4.运行main方法
 
 5.访问 http://localhost:8080
+
+
