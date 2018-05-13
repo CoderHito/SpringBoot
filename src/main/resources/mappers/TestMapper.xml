@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hitol.springboot.mapper.TestMapper" >
+
+    <select id="queryAllStoreOrgInfo" resultMap="com.hitol.springboot.model.StoreOrgInfoPO">
+        SELECT id,
+          org_id orgId,
+          org_code orgCode,
+          audit_status auditStatus,
+          accounting_unit_id accountingUnitId,
+          store_type storeType,
+          logo_url logoUrl,
+          staff_nums staffNums
+        from store_org_info
+    </select>
+</mapper>
