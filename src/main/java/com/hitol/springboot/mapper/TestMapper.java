@@ -1,11 +1,12 @@
-package com.hitol.springboot.mappers;
+package com.hitol.springboot.mapper;
 
 import com.hitol.springboot.model.StoreOrgInfoPO;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-@Repository(value = "testMapper")
+//@Repository(value = "testMapper")
+@Mapper
 public interface TestMapper {
 
     List<StoreOrgInfoPO> queryAllStoreOrgInfo();

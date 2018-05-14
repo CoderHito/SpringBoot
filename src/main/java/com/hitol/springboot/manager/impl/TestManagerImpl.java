@@ -1,7 +1,7 @@
 package com.hitol.springboot.manager.impl;
 
 import com.hitol.springboot.manager.TestManager;
-import com.hitol.springboot.mappers.TestMapper;
+import com.hitol.springboot.mapper.TestMapper;
 import com.hitol.springboot.model.StoreOrgInfoPO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

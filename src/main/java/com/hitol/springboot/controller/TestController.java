@@ -15,12 +15,12 @@ public class TestController {
 
     @RequestMapping("/index")
     public String index(){
-        return "Hello";
+        return "Hello123";
     }
 
     @RequestMapping("/test")
-    private Object queryAllStoreOrgInfo(){
-        return testManager.queryAllStoreOrgInfo();
+    private String queryAllStoreOrgInfo(){
+        return testManager.queryAllStoreOrgInfo().toString();
     }
 
 
