@@ -11,7 +11,6 @@
 	    <artifactId>spring-boot-starter-parent</artifactId>  
 	    <version>1.4.0.RELEASE</version>  
 	</parent>  
-	  
 	<dependencies>  
 	    <dependency>  
 	        <groupId>org.springframework.boot</groupId>  
@@ -46,10 +45,10 @@
 	        SpringApplication.run(SimpleController.class,args);
 	    }
 	}
-	
+ 
 
 4.运行main方法
 
 5.访问 http://localhost:8080
 
-
+	

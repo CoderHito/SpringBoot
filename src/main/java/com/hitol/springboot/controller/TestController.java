@@ -14,7 +14,8 @@ public class TestController {
     private TestManager testManager;
 
     @RequestMapping("/index")
-    public String index(){
+    public String index() throws Exception {
+//        throw new Exception("出现异常");
         return "Hello123";
     }
 
@@ -23,5 +24,9 @@ public class TestController {
         return testManager.queryAllStoreOrgInfo().toString();
     }
 
+    @RequestMapping("/hello")
+    private String hello() throws Exception {
+        throw new Exception("出现异常");
+    }
 
 }
