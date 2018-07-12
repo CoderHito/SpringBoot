@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoApplication {
 
 
-	@RequestMapping("/index")
+	@RequestMapping("/")
 	public Object index(){
 		return "Hello";
 	}
