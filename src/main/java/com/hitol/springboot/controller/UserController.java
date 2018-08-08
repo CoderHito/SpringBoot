@@ -14,6 +14,12 @@ public class UserController {
     @Autowired
     private UserManage userManage;
 
+    @RequestMapping("/index")
+    public String index() throws Exception {
+//        throw new Exception("出现异常");
+        return "Hello123";
+    }
+
     @RequestMapping("queryUserInfoList")
     public String queryUserInfoList(){
         List<UserPO> users =  userManage.queryUserInfoList();
