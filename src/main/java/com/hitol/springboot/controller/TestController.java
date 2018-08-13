@@ -15,7 +15,6 @@ public class TestController {
 
     @RequestMapping("/index")
     public String index() throws Exception {
-//        throw new Exception("出现异常");
         return "Hello123";
     }
 

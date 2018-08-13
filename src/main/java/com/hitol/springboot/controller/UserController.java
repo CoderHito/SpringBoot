@@ -23,7 +23,7 @@ public class UserController {
     @RequestMapping("/index")
     public String index() throws Exception {
 //        throw new Exception("出现异常");
-        return "Hello123";
+        return "hello";
     }
 
     @RequestMapping("queryUserInfoList")
@@ -48,6 +48,17 @@ public class UserController {
         UserDO userDO = userManage.findUser("zhangsan");
         return userDO.toString();
     }
+
+    @RequestMapping("saveUser")
+    public String saveUser(){
+        UserDO userDO = new UserDO();
+        userDO.setId(2L);
+        userDO.setName("lisi");
+        userManage.saveUser(userDO);
+        return null;
+    }
+
+
 
 
 }

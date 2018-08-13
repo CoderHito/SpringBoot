@@ -13,4 +13,6 @@ public interface UserManage {
      UserDO findById(Integer id);
 
      UserDO findUser (String name);
+
+     void saveUser(UserDO userDO);
 }

@@ -39,4 +39,9 @@ public class UserManageImpl implements UserManage {
     public UserDO findUser(String name) {
         return repository.findUser(name);
     }
+
+    @Override
+    public void saveUser(UserDO userDO) {
+        repository.save(userDO);
+    }
 }
