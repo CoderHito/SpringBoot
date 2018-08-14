@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "train",method = RequestMethod.POST)
+@RequestMapping(value = "train", method = RequestMethod.POST)
 public class TrainController {
-
-
 }

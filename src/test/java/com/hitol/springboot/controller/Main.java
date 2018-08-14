@@ -1,5 +1,6 @@
 package com.hitol.springboot.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.hitol.springboot.util.HttpUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
