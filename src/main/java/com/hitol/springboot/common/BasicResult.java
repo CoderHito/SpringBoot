@@ -48,6 +48,10 @@ public class BasicResult {
         return new BasicResult(0,null,null);
     }
 
+    public static  BasicResult success(Object data){
+        return new BasicResult(0,null,data);
+    }
+
     public static  BasicResult failure (String msg,Object data){
         return  new BasicResult(-1,msg,data);
     }
