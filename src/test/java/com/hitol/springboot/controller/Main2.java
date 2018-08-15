@@ -17,9 +17,9 @@ public class Main2 {
         //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 83359fd73fe94948385f570e3c139105
         headers.put("Authorization", "APPCODE " + appcode);
         Map<String, String> querys = new HashMap<String, String>();
-        querys.put("end", "北京");
+        querys.put("end", "上海");
         querys.put("ishigh", "0");
-        querys.put("start", "杭州");
+        querys.put("start", "泰安");
 
 
         try {
