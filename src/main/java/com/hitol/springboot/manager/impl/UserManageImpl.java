@@ -1,9 +1,7 @@
 package com.hitol.springboot.manager.impl;
 
 import com.hitol.springboot.manager.UserManage;
-import com.hitol.springboot.mapper.UserMapper;
 import com.hitol.springboot.model.UserDO;
-import com.hitol.springboot.model.UserPO;
 import com.hitol.springboot.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,11 +18,11 @@ public class UserManageImpl implements UserManage {
     private UserRepository repository;
 
 
-    @Override
-    public List<UserPO> queryUserInfoList() {
-        return null;
-//                userMapper.queryUserInfoList();
-    }
+//    @Override
+//    public List<UserPO> queryUserInfoList() {
+//        return null;
+////                userMapper.queryUserInfoList();
+//    }
 
     @Override
     public UserDO findByName(String name) {
