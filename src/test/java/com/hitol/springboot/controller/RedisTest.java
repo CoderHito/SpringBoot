@@ -6,7 +6,10 @@ import com.hitol.springboot.repository.UserRepository;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.util.CollectionUtils;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 public class RedisTest extends BaseTest {
@@ -17,24 +20,35 @@ public class RedisTest extends BaseTest {
     @Autowired
     private UserRepository userRepository;
 
-   @Test
-    public void redisReadTest(){
+    @Test
+    public void redisReadTest() {
 
-       getAllUserInfo();
+        List<UserDO> list = getAllUserInfo();
+
+        if (CollectionUtils.isEmpty(list)){
+            return ;
+        }
+
+        for (UserDO userDO : list) {
+            Long id = userDO.getId();
+            redisTemplate.opsForValue().set(id.toString(),userDO);
+        }
 
 
-       Set<String> keys = redisTemplate.keys("*");
+        Set<String> keys = redisTemplate.keys("*");
 
-       for (String key : keys) {
-           logger.info("key = {},value = {}",key,getByKey(key).toString());
-       }
-   }
+        for (String key : keys) {
+            logger.info("key = {},value = {}", key, getByKey(key).toString());
+        }
+    }
 
-    private void getAllUserInfo() {
+    private List<UserDO> getAllUserInfo() {
+
+        return userRepository.findAll();
     }
 
     private UserDO getByKey(String key) {
-       return redisTemplate.opsForValue().get(key);
+        return redisTemplate.opsForValue().get(key);
     }
 
 }
