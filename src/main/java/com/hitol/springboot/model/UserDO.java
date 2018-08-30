@@ -32,6 +32,10 @@ public class UserDO {
      */
     private String name;
 
+    public UserDO(){
+
+    }
+
     public Long getId() {
         return id;
     }

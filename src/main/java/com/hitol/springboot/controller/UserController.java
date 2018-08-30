@@ -58,7 +58,11 @@ public class UserController {
         return null;
     }
 
-
+    @RequestMapping("findOne")
+    public String findOne(){
+        UserDO userDO = userManage.findOne(1);
+        return userDO.toString();
+    }
 
 
 }

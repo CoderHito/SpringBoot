@@ -9,11 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserManageImpl implements UserManage {
-    @Autowired
-    private UserMapper userMapper;
+//    @Autowired
+//    private UserMapper userMapper;
 
     @Autowired
     private UserRepository repository;
@@ -21,27 +22,38 @@ public class UserManageImpl implements UserManage {
 
     @Override
     public List<UserPO> queryUserInfoList() {
-        return userMapper.queryUserInfoList();
+        return null;
+//                userMapper.queryUserInfoList();
     }
 
     @Override
     public UserDO findByName(String name) {
-        UserDO userDO = repository.findByName(name);
-        return userDO;
+//        UserDO userDO = repository.findByName(name);
+//        return userDO;
+        return null;
     }
 
     @Override
     public UserDO findById(Integer id) {
-        return repository.findById(id);
+//        return repository.findById(id);
+        return null;
     }
 
     @Override
     public UserDO findUser(String name) {
-        return repository.findUser(name);
+        return null;
+//                repository.findUser(name);
     }
 
     @Override
     public void saveUser(UserDO userDO) {
         repository.save(userDO);
+    }
+
+    @Override
+    public UserDO findOne(Integer id) {
+//        UserDO userDO = repository.findOne(id);
+//        return userDO;
+        return null;
     }
 }

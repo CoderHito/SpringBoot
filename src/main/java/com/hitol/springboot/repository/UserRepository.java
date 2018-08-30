@@ -9,17 +9,19 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<UserDO, Long> {
-    UserDO findByName(String name);
-
-
-    UserDO findById(Integer id);
-
-    /**
-     * nativeQuery = true 采用原生sql方式来查询
-     */
-    @Query(nativeQuery = true, value = "select * from auth_user u where u.name=:name")
-    UserDO findUser(@Param("name") String name);
-
+//    UserDO findByName(String name);
+//
+//
+//    UserDO findById(Integer id);
+//
+//    /**
+//     * nativeQuery = true 采用原生sql方式来查询
+//     */
+//    @Query(nativeQuery = true, value = "select * from auth_user u where u.name=:name")
+//    UserDO findUser(@Param("name") String name);
+//
+//
+//    UserDO getOne(Integer id);
 
 /**
  *
