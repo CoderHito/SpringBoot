@@ -1,4 +1,4 @@
-package com.hitol.springboot.controller;
+package com.hitol.springboot.test;
 
 import java.util.UUID;
 

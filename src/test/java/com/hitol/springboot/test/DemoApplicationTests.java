@@ -1,4 +1,4 @@
-package com.hitol.springboot.controller;
+package com.hitol.springboot.test;
 
 import com.hitol.springboot.model.UserDO;
 import com.hitol.springboot.repository.UserRepository;
@@ -14,7 +14,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest

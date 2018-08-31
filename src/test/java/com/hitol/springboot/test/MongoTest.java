@@ -1,4 +1,4 @@
-package com.hitol.springboot.controller;
+package com.hitol.springboot.test;
 
 import com.hitol.springboot.model.UserDO;
 import com.hitol.springboot.repository.UserRepository;

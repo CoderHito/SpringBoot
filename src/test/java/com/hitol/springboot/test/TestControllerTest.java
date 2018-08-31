@@ -1,4 +1,4 @@
-//package com.hitol.springboot.controller;
+//package com.hitol.springboot.test;
 //
 //import org.junit.runner.RunWith;
 //import org.springframework.beans.factory.annotation.Autowired;
