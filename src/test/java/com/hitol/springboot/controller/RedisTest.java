@@ -18,8 +18,12 @@ public class RedisTest extends BaseTest {
     private RedisTemplate<String, UserDO> redisTemplate;
 
     @Autowired
-    private UserRepository userRepository;
+    private  UserRepository userRepository;
 
+    public  List<UserDO> getAllUserInfo() {
+
+        return userRepository.findAll();
+    }
     @Test
     public void redisReadTest() {
 
@@ -42,10 +46,6 @@ public class RedisTest extends BaseTest {
         }
     }
 
-    private List<UserDO> getAllUserInfo() {
-
-        return userRepository.findAll();
-    }
 
     private UserDO getByKey(String key) {
         return redisTemplate.opsForValue().get(key);

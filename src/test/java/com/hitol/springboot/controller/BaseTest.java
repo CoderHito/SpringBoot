@@ -1,10 +1,16 @@
 package com.hitol.springboot.controller;
 
+import com.hitol.springboot.model.UserDO;
+import com.hitol.springboot.repository.UserRepository;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
@@ -18,4 +24,7 @@ public class BaseTest {
     public void setLogger(Logger logger) {
         this.logger = logger;
     }
+
+
+
 }
