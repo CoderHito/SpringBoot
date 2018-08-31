@@ -2,6 +2,7 @@ package com.hitol.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 @SpringBootApplication
 @EnableScheduling
+@EnableAsync
 public class DemoApplication {
 
 
