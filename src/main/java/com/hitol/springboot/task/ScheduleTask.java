@@ -22,7 +22,7 @@ public class ScheduleTask {
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-    @Scheduled(cron="*/5 * * * * *")
+//    @Scheduled(cron="*/5 * * * * *")
     public void test(){
         System.out.println("现在时间 ： " + dateFormat.format(new Date()));
     }
