@@ -1,4 +1,4 @@
-package com.hitol.springboot.test;
+package com.hitol.springboot.test.sb;
 
 import com.hitol.springboot.task.Task;
 import org.junit.Test;

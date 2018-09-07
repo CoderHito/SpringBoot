@@ -1,4 +1,4 @@
-package com.hitol.springboot.test;
+package com.hitol.springboot.test.sb;
 
 import com.hitol.springboot.model.Hitol;
 import org.junit.Test;
