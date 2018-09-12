@@ -1,4 +1,4 @@
-package com.hitol.springboot.test.sb;
+package com.hitol.springboot.test;
 
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

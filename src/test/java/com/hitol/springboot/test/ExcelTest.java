@@ -1,6 +1,6 @@
 package com.hitol.springboot.test;
 
-import com.hitol.springboot.test.sb.BaseTest;
+import com.hitol.springboot.util.ExcelUtil;
 import org.apache.poi.ooxml.util.SAXHelper;
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.openxml4j.opc.PackageAccess;
@@ -18,10 +18,8 @@ import org.apache.poi.xssf.usermodel.XSSFComment;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Assert;
 import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.util.LinkedList;
 import java.util.List;
@@ -32,7 +30,8 @@ public class ExcelTest {
 
     public static void main(String[] args) throws Exception {
         ExcelUtil excelUtil = new ExcelUtil(file);
-        excelUtil.setOutFile(out);
+//        excelUtil.setOutFile(out);
+//        excelUtil.parseExcel();
         excelUtil.parseExcelBigData();
     }
 

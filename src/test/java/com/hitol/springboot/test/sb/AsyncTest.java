@@ -1,6 +1,7 @@
 package com.hitol.springboot.test.sb;
 
 import com.hitol.springboot.task.Task;
+import com.hitol.springboot.test.BaseTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

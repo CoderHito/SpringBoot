@@ -2,6 +2,7 @@ package com.hitol.springboot.test.sb;
 
 import com.hitol.springboot.model.UserDO;
 import com.hitol.springboot.repository.UserRepository;
+import com.hitol.springboot.test.BaseTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.repository.MongoRepository;
