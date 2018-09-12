@@ -6,11 +6,16 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 
 @Repository
 public interface UserRepository extends JpaRepository<UserDO, Long> {
-//    UserDO findByName(String name);
-//
+    UserDO findByName(String name);
+
+    @Override
+    Optional<UserDO> findById(Long aLong);
+    //
 //
 //    UserDO findById(Integer id);
 //

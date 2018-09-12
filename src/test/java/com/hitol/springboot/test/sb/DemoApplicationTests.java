@@ -11,10 +11,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.*;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * JPA test
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 public class DemoApplicationTests {
@@ -23,6 +29,9 @@ public class DemoApplicationTests {
 
     @Autowired
     private UserRepository userRepository;
+
+    @PersistenceContext
+    private EntityManager em;
 
     @Test
     public void saveUser() {
@@ -143,4 +152,32 @@ public class DemoApplicationTests {
         logger.info(" 当前页记录数 size = " + page.getSize());
         logger.info(" 当前页内容  Content = " + page.getContent());
     }
+
+
+    @Test
+    public void testFindBy() {
+//       UserDO userDO =  userRepository.findByName("尼古拉斯赵四");
+//       logger.info(userDO.toString());
+
+        UserDO userDO = userRepository.findById(10L).get();
+        logger.info(userDO.toString());
+    }
+
+    /**
+     * entityManager 是JPA 用来操作数据库的对象，类似于Hibernate的session、MyBaits的SQLSession。
+     */
+    @Test
+    public void testByEntityManager() {
+
+        /**
+         *  执行原生sql，并把数据返回到UserDO对象中
+         */
+        Query query = em.createNativeQuery("select * from auth_user", UserDO.class);
+        List<UserDO> list = query.getResultList();
+
+        for (UserDO user : list) {
+            logger.info(user.toString());
+        }
+    }
+
 }
