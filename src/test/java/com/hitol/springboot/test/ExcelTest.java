@@ -25,14 +25,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ExcelTest {
-    private static File file = new File("aaa.xlsx");
+    private static File file = new File("E:\\test\\xiaxin.xlsx");
     private static File out = new File("test.txt");
 
     public static void main(String[] args) throws Exception {
         ExcelUtil excelUtil = new ExcelUtil(file);
 //        excelUtil.setOutFile(out);
-//        excelUtil.parseExcel();
-        excelUtil.parseExcelBigData();
+        excelUtil.parseExcel();
+//        excelUtil.parseExcelBigData();
     }
 
     private static void writeFile() throws Exception {
