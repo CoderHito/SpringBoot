@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * @author hitol
@@ -17,7 +18,7 @@ import javax.persistence.Table;
 /**
  *这里声明这个实体类对应的表名是 AUTH_USER。如果没有指定，则表名和实体的名称保持一致。
  */
-public class UserDO {
+public class UserDO implements Serializable {
     @Id
     /**
      * @Id 注解声明了实体唯一标识对应的属性。
