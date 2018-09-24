@@ -20,9 +20,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 
 import java.io.*;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Excel读取工具
@@ -183,12 +181,44 @@ public class ExcelUtil {
         }
     }
 
+    private List<String> orgList = new ArrayList<>();
+    private Map<String, String> orgCodeNameMap = new HashMap<>();
+
+    private void initCodeMap() {
+        orgCodeNameMap.put("99820001", "区域事业部－华东");
+        orgCodeNameMap.put("99820002", "区域事业部－华北");
+        orgCodeNameMap.put("99820003", "区域事业部－华中");
+        orgCodeNameMap.put("99820004", "区域事业部－西北");
+        orgCodeNameMap.put("99820005", "区域事业部－东南");
+        orgCodeNameMap.put("99820006", "区域事业部－华南");
+        orgCodeNameMap.put("99820007", "互联网事业部");
+        orgCodeNameMap.put("99820008", "创新业务部");
+        orgCodeNameMap.put("99820009", "金融合作部");
+        orgCodeNameMap.put("99820010", "市场拓展部");
+        orgCodeNameMap.put("99821001", "玖康");
+        orgCodeNameMap.put("99821002", "分蛋");
+        orgCodeNameMap.put("99821003", "嘉和");
+        orgCodeNameMap.put("99821050", "网商保理");
+        orgCodeNameMap.put("99829999", "区域事业部-测试");
+    }
+
     private void parseSheetOnce(Workbook workbook, int sheetIndex) {
+        initCodeMap();
         Sheet sheet = workbook.getSheetAt(sheetIndex);
 
         Iterator<Row> rowIterator = sheet.iterator();
         while (rowIterator.hasNext()) {
             Row row = rowIterator.next();
+
+            Cell cell62 = row.getCell(60);
+            Cell cell2 = row.getCell(1);
+//            System.out.println(cell62.getStringCellValue());
+//            System.out.print(cell2.getStringCellValue() + " ");
+            if (cell62 != null) {
+                validateCodeAndName(cell62.getStringCellValue());
+            }else{
+                System.out.println(" ");
+            }
             List<String> rowList = new LinkedList<>();
             Iterator<Cell> cellIterator = row.iterator();
             int rowIndex = 0;
@@ -214,9 +244,18 @@ public class ExcelUtil {
                         break;
                 }
             }
-            System.err.println(rowIndex + ":" + rowList);
-            writeToFile(parseRowReturnString(rowList));
+//            System.err.println(rowIndex + ":" + rowList);
+
+//            validateCodeAndName(rowList);
         }
 
+    }
+
+    private void validateCodeAndName(String code) {
+        if (StringUtils.isBlank(code)) {
+            System.out.println("");
+        } else {
+            System.out.println(orgCodeNameMap.get(code.substring(0, 8)));
+        }
     }
 }
