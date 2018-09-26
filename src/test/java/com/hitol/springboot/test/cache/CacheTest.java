@@ -22,10 +22,10 @@ public class CacheTest extends BaseTest {
     @Test
     public void testCache(){
 
-        UserDO userDO = repository.findByName("尼古拉斯赵四");
+        UserDO userDO = repository.findByName("尼古拉斯赵五");
         getLogger().info("userDo = " + userDO.toString());
 
-        UserDO userDO2 = repository.findByName("尼古拉斯赵四");
+        UserDO userDO2 = repository.findByName("尼古拉斯赵五");
         getLogger().info("userDo = " + userDO2.toString());
 
         cacheManager.getCache("users");
