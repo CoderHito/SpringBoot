@@ -200,6 +200,81 @@ public class ExcelUtil {
         orgCodeNameMap.put("99821003", "嘉和");
         orgCodeNameMap.put("99821050", "网商保理");
         orgCodeNameMap.put("99829999", "区域事业部-测试");
+
+
+//        998200010001
+        orgCodeNameMap.put("998200010001", "上海事业部");
+        orgCodeNameMap.put("998200010002", "南京业务部");
+        orgCodeNameMap.put("998200010003", "郑州事业部");
+        orgCodeNameMap.put("998200010004", "呼和浩特事业部");
+
+        orgCodeNameMap.put("998200020001", "济南事业部");
+        orgCodeNameMap.put("998200020002", "合肥事业部");
+
+        orgCodeNameMap.put("998200030001", "长沙事业部");
+        orgCodeNameMap.put("998200030002", "南昌事业部");
+
+        orgCodeNameMap.put("998200040001", "重庆事业部");
+        orgCodeNameMap.put("998200040003", "成都事业部");
+        orgCodeNameMap.put("998200040002", "西安事业部");
+
+        orgCodeNameMap.put("998200050001", "杭州事业部");
+        orgCodeNameMap.put("998200050002", "宁波事业部");
+        orgCodeNameMap.put("998200050003", "厦门事业部");
+        orgCodeNameMap.put("998200050004", "北京事业部");
+        orgCodeNameMap.put("998200050005", "福州事业部");
+
+        orgCodeNameMap.put("998200060001", "广州事业部");
+        orgCodeNameMap.put("998200060002", "深圳事业部");
+
+        orgCodeNameMap.put("998200100001", "石家庄事业部");
+
+        orgCodeNameMap.put("998299990001", "测试事业部");
+
+        orgCodeNameMap.put("998210010001", "合肥事业部");
+        orgCodeNameMap.put("998210010002", "西安事业部");
+        orgCodeNameMap.put("998210010003", "长沙事业部");
+        orgCodeNameMap.put("998210010004", "重庆事业部");
+        orgCodeNameMap.put("998210010005", "泉州事业部");
+        orgCodeNameMap.put("998210010006", "福州事业部");
+        orgCodeNameMap.put("998210010007", "成都事业部");
+        orgCodeNameMap.put("998210010008", "青岛事业部");
+        orgCodeNameMap.put("998210010009", "呼和浩特事业部");
+        orgCodeNameMap.put("998210010010", "石家庄事业部");
+        orgCodeNameMap.put("998210010011", "南昌事业部");
+        orgCodeNameMap.put("998210010012", "北京事业部");
+        orgCodeNameMap.put("998210010013", "莆田事业部");
+        orgCodeNameMap.put("998210010014", "太原事业部");
+        orgCodeNameMap.put("998210010015", "深圳事业部");
+        orgCodeNameMap.put("998210010016", "杭州事业部");
+        orgCodeNameMap.put("998210010017", "厦门事业部");
+
+        orgCodeNameMap.put("998210020001", "深圳事业部");
+        orgCodeNameMap.put("998210020002", "重庆事业部");
+        orgCodeNameMap.put("998210020003", "成都事业部");
+        orgCodeNameMap.put("998210020004", "太原事业部");
+        orgCodeNameMap.put("998210020005", "合肥事业部");
+        orgCodeNameMap.put("998210020006", "南宁事业部");
+        orgCodeNameMap.put("998210020007", "贵阳事业部");
+        orgCodeNameMap.put("998210020008", "泉州事业部");
+        orgCodeNameMap.put("998210020009", "武汉事业部");
+        orgCodeNameMap.put("998210020010", "南昌事业部");
+        orgCodeNameMap.put("998210020011", "南京事业部");
+        orgCodeNameMap.put("998210020012", "广州事业部");
+
+
+        orgCodeNameMap.put("9982100301", "运营");
+        orgCodeNameMap.put("9982100302", "区域一");
+        orgCodeNameMap.put("9982100303", "区域二");
+        orgCodeNameMap.put("9982100304", "区域三");
+        orgCodeNameMap.put("9982100305", "区域四");
+
+        orgCodeNameMap.put("998200500100", "团队1");
+
+
+
+
+
     }
 
     private void parseSheetOnce(Workbook workbook, int sheetIndex) {
@@ -210,12 +285,12 @@ public class ExcelUtil {
         while (rowIterator.hasNext()) {
             Row row = rowIterator.next();
 
-            Cell cell62 = row.getCell(60);
+            Cell cell6 = row.getCell(60);
             Cell cell2 = row.getCell(1);
-//            System.out.println(cell62.getStringCellValue());
+//            System.out.println(cell6.getStringCellValue());
 //            System.out.print(cell2.getStringCellValue() + " ");
-            if (cell62 != null) {
-                validateCodeAndName(cell62.getStringCellValue());
+            if (cell6 != null) {
+                validateCodeAndName(cell6.getStringCellValue());
             }else{
                 System.out.println(" ");
             }
@@ -255,7 +330,8 @@ public class ExcelUtil {
         if (StringUtils.isBlank(code)) {
             System.out.println("");
         } else {
-            System.out.println(orgCodeNameMap.get(code.substring(0, 8)));
+//            System.out.println(orgCodeNameMap.get(code.substring(0,8)));
+            System.out.println(orgCodeNameMap.get(code));
         }
     }
 }
