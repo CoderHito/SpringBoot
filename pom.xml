@@ -22,6 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <activiti.version>5.22.0</activiti.version>
     </properties>
 
     <dependencies>
@@ -157,6 +158,42 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
+
+
+        <!--activiti -->
+        <!--该版本6.0 不支持SpringBoot2版本-->
+        <!--<dependency>-->
+        <!--<groupId>org.activiti</groupId>-->
+        <!--<artifactId>activiti-spring-boot-starter-basic</artifactId>-->
+        <!--<version>${activiti.version}</version>-->
+        <!--</dependency>-->
+
+
+        <dependency>
+            <groupId>org.activiti</groupId>
+            <artifactId>activiti-modeler</artifactId>
+            <version>${activiti.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.activiti</groupId>
+            <artifactId>activiti-diagram-rest</artifactId>
+            <version>${activiti.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.activiti</groupId>
+            <artifactId>activiti-engine</artifactId>
+            <version>${activiti.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.activiti</groupId>
+            <artifactId>activiti-spring</artifactId>
+            <version>${activiti.version}</version>
+        </dependency>
+
 
         <!--<dependency>-->
         <!--<groupId>com.monitorjbl</groupId>-->
