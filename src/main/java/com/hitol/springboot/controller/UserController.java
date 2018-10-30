@@ -4,6 +4,7 @@ import com.hitol.springboot.manager.UserManage;
 import com.hitol.springboot.model.UserDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class UserController {
     private UserManage userManage;
 
     @RequestMapping("/index")
+    @ResponseBody
     public String index() throws Exception {
 //        throw new Exception("出现异常");
         return "hello";
