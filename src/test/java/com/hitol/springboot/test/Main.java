@@ -166,18 +166,23 @@ public class Main {
 //        System.out.println(UnderlineToHump(s12));
 
 
-        System.out.println(s1.toUpperCase());
-        System.out.println(s2.toUpperCase());
-        System.out.println(s3.toUpperCase());
-        System.out.println(s4.toUpperCase());
-        System.out.println(s5.toUpperCase());
-        System.out.println(s6.toUpperCase());
-        System.out.println(s7.toUpperCase());
-        System.out.println(s8.toUpperCase());
-        System.out.println(s9.toUpperCase());
-        System.out.println(s10.toUpperCase());
-        System.out.println(s11.toUpperCase());
-        System.out.println(s12.toUpperCase());
+//        System.out.println(s1.toUpperCase());
+//        System.out.println(s2.toUpperCase());
+//        System.out.println(s3.toUpperCase());
+//        System.out.println(s4.toUpperCase());
+//        System.out.println(s5.toUpperCase());
+//        System.out.println(s6.toUpperCase());
+//        System.out.println(s7.toUpperCase());
+//        System.out.println(s8.toUpperCase());
+//        System.out.println(s9.toUpperCase());
+//        System.out.println(s10.toUpperCase());
+//        System.out.println(s11.toUpperCase());
+//        System.out.println(s12.toUpperCase());
+
+        int love = -2147483647;
+        while(true){
+            System.out.println(love--);
+        }
 
 
     }

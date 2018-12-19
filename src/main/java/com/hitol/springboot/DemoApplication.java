@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 @SpringBootApplication
-//@EnableScheduling
+@EnableScheduling
 //@EnableAsync
 //@EnableCaching
 public class DemoApplication {

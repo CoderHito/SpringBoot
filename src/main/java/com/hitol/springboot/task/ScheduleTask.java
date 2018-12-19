@@ -1,5 +1,7 @@
 package com.hitol.springboot.task;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -19,12 +21,13 @@ import java.util.Date;
  **/
 @Component
 public class ScheduleTask {
-
+    public static Logger logger = LoggerFactory.getLogger(ScheduleTask.class);
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-//    @Scheduled(cron="*/5 * * * * *")
+    @Scheduled(cron="*/5 * * * * *")
     public void test(){
-        System.out.println("现在时间 ： " + dateFormat.format(new Date()));
+        logger.info("现在时间 ：" + dateFormat.format(new Date()));
+//        System.out.println("现在时间 ： " + dateFormat.format(new Date()));
     }
 
 }
